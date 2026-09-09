@@ -1,25 +1,32 @@
+"""
+Compute the delay time distribution (DTD) of events from a user-provided set of time bins and an event_df (see `events.get_events`) which stores the timing and duration of events for a stellar population.
+"""
+
+__all__ = ['get_dtd']
+
 import numpy as np
 import pandas as pd
 
-def get_dtd(df, bins, sample_mass):
+def get_dtd(event_df, bins, sample_mass, event_is_instantaneous=False):
     """
-    Compute the delay-time distribution (DTD) power in user-specified bins,
+    Compute the delay time distribution (DTD) power in user-specified bins,
     from the interval dataframe produced by get_events.
 
     Parameters
     ----------
-    df : pd.DataFrame
-        Output of get_events -- must contain 'star', 'tphys_start', 'tphys_end'.
+    event_df : pandas.DataFrame
+        Output of `get_events`. Minimally a dataframe which contains the columns `'tphys_start'`, `'tphys_end'`.
     bins : array-like
-        Monotonically increasing bin edges, e.g. [0, 6, 12, 20] -> bins
+        Monotonically increasing bin edges, e.g. `[0, 6, 12, 20]` -> bins
         [0,6), [6,12), [12,20).
     sample_mass : float
         Total sampled population mass used to normalize power
-        (power = duration / (bin_width * sample_mass)).
+        (power = duration / (bin_width * `sample_mass`)).
 
     Returns
     -------
-    pd.DataFrame with columns: bin_start, bin_end, primary, secondary, combined
+    dtd_df : pandas.DataFrame 
+        DataFrame with one row per time bin. Include columns `bin_start`, `bin_end`, `power`.
     """
     bins = np.asarray(bins, dtype=float)
     if len(bins) < 2:
@@ -28,9 +35,6 @@ def get_dtd(df, bins, sample_mass):
         raise ValueError('bins must be strictly increasing')
 
     bins_with_edges = list(zip(bins[:-1], bins[1:]))
-
-    primary_events = df[df['star'] == 1]
-    secondary_events = df[df['star'] == 2]
 
     def _power_per_bin(events):
         starts = events['tphys_start'].to_numpy()
@@ -45,19 +49,20 @@ def get_dtd(df, bins, sample_mass):
 
             total_duration = clipped_durations.sum()
             bin_width = t_max - t_min
-            power = total_duration / (bin_width * sample_mass)
+            if event_is_instantaneous:
+                # the dtd is simply events per unit mass. each event contributes a single 1 / sampl_mass of power to the bin.
+                power = 1 / sample_mass
+            else:
+                # here we compute the power as the total duration of events in the bin, normalized by the bin width and sample mass. 
+                power = total_duration / (bin_width * sample_mass)
             powers.append(float(power))
 
         return powers
 
-    primary_dtd = _power_per_bin(primary_events)
-    secondary_dtd = _power_per_bin(secondary_events)
-    combined_dtd = [p + s for p, s in zip(primary_dtd, secondary_dtd)]
+    dtd = _power_per_bin(event_df)
 
     return pd.DataFrame({
         'bin_start': bins[:-1],
         'bin_end': bins[1:],
-        'primary': primary_dtd,
-        'secondary': secondary_dtd,
-        'combined': combined_dtd,
+        'power': dtd,
     })

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "eventlab"
 version = "0.1.0"
-description = "A small toolkit to build event catalogs and DTDs from COSMIC output"
+description = "A small toolkit to build event catalogs from COSMIC output"
 requires-python = ">=3.9"
 dependencies = [
     "numpy",
