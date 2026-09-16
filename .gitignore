@@ -8,4 +8,5 @@ dist/
 .venv/
 fort.99
 tracks_log.txt
+.cache/
 EOF

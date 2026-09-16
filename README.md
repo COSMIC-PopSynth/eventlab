@@ -1,6 +1,6 @@
 # eventlab
 
-A small toolkit to build event catalogs and delay time distributions (DTDs) from COSMIC output
+A [COSMIC](https://github.com/COSMIC-PopSynth/COSMIC) post-processing package to generate synthetic event catalogs.
 
 ## Install
 
@@ -8,21 +8,6 @@ A small toolkit to build event catalogs and delay time distributions (DTDs) from
 pip install .
 ```
 
-## Contents
+## Docs
 
-- `eventlab.events` - Define events over a `bcm` (or `bcm`-like) dataframe via a boolean mask created with the helper `build_mask` or your own custom mask. Extract contiguous time intervals per binary/star where the mask holds and select summary statistics to report on columns of interest during the events with `get_events`. Include key information about binary interaction (whether underwent RLOF/CEE/No interaction before/during event, what stages (kstars) accreted or donated at, whether merged and what merger_type was) using `include_interaction_info=True` (requires the `bpp`).
-
-- `eventlab.dtd` - Properly bin those event intervals into a delay time distribution (DTD) with `get_event_bin_counts`. Intervals that span bins are split and their duration in each bin is treated independently. DTD power (for events with nonzero duration) with units of $M_\odot^{-1}$ in bin i ($\Psi_i$) is defined as: 
-
-$$
-\Psi_i = \sum_{\text{events} \in \text{bin } i} \frac{\text{event duration}}{\text{duration of bin } i \times M_{\text{sample}}}
-$$
-
-For events with zero duration, it is:
-
-$$
-\Psi_i = \sum_{\text{events} \in \text{bin } i} \frac{1}{M_{\text{sample}}}
-$$
-
-
-- `demo/` - Example notebooks showing usage end-to-end.
+See the full documentation at [https://COSMIC-PopSynth.github.io/eventlab/](https://COSMIC-PopSynth.github.io/eventlab/)

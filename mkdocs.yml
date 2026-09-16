@@ -1,0 +1,58 @@
+site_name: eventlab
+repo_url: https://github.com/COSMIC-PopSynth/eventlab
+
+theme:
+  name: material
+  icon:
+  logo: assets/header_logo.png
+  favicon: assets/thumbnail_logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+      
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+  - mkdocs-jupyter:
+      include_source: true
+
+nav:
+  - Home: index.md
+  - Modules:
+      - events: reference/events.md
+      - dtd: reference/dtd.md
+      - imf: reference/imf.md
+      - photometry: reference/photometry.md
+  - Demos:
+      - example: demo/example.ipynb
