@@ -1,0 +1,2691 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../imf/">
+      
+      
+        <link rel="next" href="../../demo/example/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/thumbnail_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>photometry - eventlab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#photometry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="eventlab" class="md-header__button md-logo" aria-label="eventlab" data-md-component="logo">
+      
+  <img src="../../assets/header_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            eventlab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              photometry
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/COSMIC-PopSynth/eventlab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="eventlab" class="md-nav__button md-logo" aria-label="eventlab" data-md-component="logo">
+      
+  <img src="../../assets/header_logo.png" alt="logo">
+
+    </a>
+    eventlab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/COSMIC-PopSynth/eventlab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dtd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dtd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    imf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    photometry
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    photometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eventlab.photometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        photometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="photometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.MISTBolometricCorrectionGrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MISTBolometricCorrectionGrid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.add_bands_photometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add_bands_photometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.build_photo_grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build_photo_grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_absolute_bol_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_absolute_bol_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_absolute_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_absolute_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_apparent_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_apparent_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_log_g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_log_g
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Demos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demo/example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eventlab.photometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        photometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="photometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.MISTBolometricCorrectionGrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MISTBolometricCorrectionGrid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.add_bands_photometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        add_bands_photometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.build_photo_grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build_photo_grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_absolute_bol_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_absolute_bol_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_absolute_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_absolute_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_apparent_mag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_apparent_mag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventlab.photometry.get_log_g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_log_g
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="photometry">photometry</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="eventlab.photometry" class="doc doc-heading">
+            <code>eventlab.photometry</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Helpful functions for generating mock photometry for COSMIC, including extinction, converting absolute &lt;-&gt; apparent magnitudes, etc. Relies heavily on
+COGSWORTH's observables.photometry (https://cogsworth.readthedocs.io/en/latest/tutorials/observables/photometry.html) module, which interpolates over MIST
+bolometric corrections. Repackaged here for utility. Future work may try to integrate MESA Colors.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="eventlab.photometry.MISTBolometricCorrectionGrid" class="doc doc-heading">
+            <code>MISTBolometricCorrectionGrid</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Download, cache, and ingest MIST bolometric correction grids.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>bands</code>
+            </td>
+            <td>
+                  <code><span title="tuple">tuple</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>tuple of photometric bands to include (e.g. ("2MASS_J", "2MASS_Ks"),
+or ("Bessell_B", "Bessell_V", "Bessel_I"))</p>
+              </div>
+            </td>
+            <td>
+                  <code>(&#39;2MASS_J&#39;, &#39;2MASS_Ks&#39;)</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cache_dir</code>
+            </td>
+            <td>
+                  <code><span title="pathlib.Path">Path</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>directory where tarballs, extracted files, and HDF5s are stored
+(default: ~/.MIST_bc_grids)</p>
+              </div>
+            </td>
+            <td>
+                  <code><span title="expanduser">expanduser</span>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+              <details class="mkdocstrings-source">
+                <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MISTBolometricCorrectionGrid</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Download, cache, and ingest MIST bolometric correction grids.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bands : tuple[str]</span>
+<span class="sd">        tuple of photometric bands to include (e.g. ("2MASS_J", "2MASS_Ks"),</span>
+<span class="sd">        or ("Bessell_B", "Bessell_V", "Bessel_I"))</span>
+<span class="sd">    cache_dir</span>
+<span class="sd">        directory where tarballs, extracted files, and HDF5s are stored</span>
+<span class="sd">        (default: ~/.MIST_bc_grids)</span>
+<span class="sd">    """</span>
+    <span class="n">bands</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"2MASS_J"</span><span class="p">,</span> <span class="s2">"2MASS_Ks"</span><span class="p">)</span>
+    <span class="n">cache_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"~/.MIST_bc_grids"</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+    <span class="n">rebuild</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">needed_filter_sets</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">band</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="p">:</span>
+            <span class="n">found_it</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">filter_set</span> <span class="ow">in</span> <span class="n">MIST_FILTER_SETS</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">band</span> <span class="ow">in</span> <span class="n">MIST_FILTER_SETS</span><span class="p">[</span><span class="n">filter_set</span><span class="p">]:</span>
+                    <span class="n">needed_filter_sets</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span>
+                    <span class="n">found_it</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">found_it</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"band '</span><span class="si">{</span><span class="n">band</span><span class="si">}</span><span class="s2">' not found in any MIST filter set"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">needed_filter_sets</span> <span class="o">=</span> <span class="n">needed_filter_sets</span>
+
+        <span class="n">dfs</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">load_hdf5</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span> <span class="k">for</span> <span class="n">filter_set</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">needed_filter_sets</span><span class="p">]</span>
+        <span class="n">df_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Rv"</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="p">]</span>
+        <span class="n">bc_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">df_cols</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bc_grid</span> <span class="o">=</span> <span class="n">bc_grid</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">bc_grid</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_build_interpolators</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">download_filter_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="n">tarball_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">filter_set</span><span class="si">}</span><span class="s2">.txz"</span>
+
+        <span class="k">if</span> <span class="n">tarball_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebuild</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">tarball_path</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://waps.cfa.harvard.edu/MIST/BC_tables/v2/</span><span class="si">{</span><span class="n">filter_set</span><span class="si">}</span><span class="s2">.txz"</span>
+
+        <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+            <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">tarball_path</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
+                        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">tarball_path</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extract_filter_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="n">extract_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span> <span class="o">/</span> <span class="n">filter_set</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebuild</span> <span class="ow">and</span> <span class="n">extract_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">extract_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="n">extract_dir</span>
+
+        <span class="k">if</span> <span class="n">extract_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">extract_dir</span><span class="p">)</span>
+        <span class="n">extract_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">tarball_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_filter_set</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">tarball_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"r:*"</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+            <span class="n">tf</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">extract_dir</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">extract_dir</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_iter_data_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">folder</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">folder</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">"*"</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"."</span><span class="p">):</span>
+                <span class="k">yield</span> <span class="n">p</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">read_filter_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="n">extract_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_filter_set</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span>
+
+        <span class="n">dfs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">fp</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_iter_data_files</span><span class="p">(</span><span class="n">extract_dir</span><span class="p">)):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">stripped</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">"#"</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">stripped</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"lgTef"</span><span class="p">):</span>
+                        <span class="n">header_line</span> <span class="o">=</span> <span class="n">stripped</span>
+                        <span class="k">break</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"[Fe/H]"</span><span class="p">,</span> <span class="s2">"feh"</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"Fe_H"</span><span class="p">,</span> <span class="s2">"feh"</span><span class="p">)</span>
+                     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">header_line</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+                <span class="n">fp</span><span class="p">,</span>
+                <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\\</span><span class="s2">s+"</span><span class="p">,</span>
+                <span class="n">comment</span><span class="o">=</span><span class="s2">"#"</span><span class="p">,</span>
+                <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">engine</span><span class="o">=</span><span class="s2">"python"</span><span class="p">,</span>
+                <span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">df</span><span class="p">[</span><span class="s2">"Teff"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">df</span><span class="p">[</span><span class="s2">"lgTef"</span><span class="p">]</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"lgTef"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dfs</span><span class="p">:</span>     <span class="c1"># pragma: no cover</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"no BC files found in </span><span class="si">{</span><span class="n">extract_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">"a_Fe"</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">"a_Fe"</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"a_Fe"</span><span class="p">)</span>
+
+        <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s2">"Teff"</span><span class="p">,</span> <span class="s2">"logg"</span><span class="p">,</span> <span class="s2">"feh"</span><span class="p">,</span> <span class="s2">"Av"</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_hdf5</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="n">h5_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">filter_set</span><span class="si">}</span><span class="s2">.h5"</span>
+
+        <span class="k">if</span> <span class="n">h5_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebuild</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">h5_path</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_filter_set</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span>
+            <span class="n">h5_path</span><span class="p">,</span>
+            <span class="n">key</span><span class="o">=</span><span class="s2">"bc"</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">"w"</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">h5_path</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_hdf5</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="n">h5_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">filter_set</span><span class="si">}</span><span class="s2">.h5"</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">h5_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebuild</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">build_hdf5</span><span class="p">(</span><span class="n">filter_set</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">h5_path</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">"bc"</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_build_interpolators</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bc_grid</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+        <span class="n">teff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s2">"Teff"</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">logg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s2">"logg"</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">feh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s2">"feh"</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">av</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s2">"Av"</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+        <span class="n">teff</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">logg</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">feh</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">av</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+        <span class="n">full_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">teff</span><span class="p">,</span> <span class="n">logg</span><span class="p">,</span> <span class="n">feh</span><span class="p">,</span> <span class="n">av</span><span class="p">],</span>
+            <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">"Teff"</span><span class="p">,</span> <span class="s2">"logg"</span><span class="p">,</span> <span class="s2">"feh"</span><span class="p">,</span> <span class="s2">"Av"</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="n">dense</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">full_index</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span> <span class="o">=</span> <span class="p">(</span><span class="n">teff</span><span class="p">,</span> <span class="n">logg</span><span class="p">,</span> <span class="n">feh</span><span class="p">,</span> <span class="n">av</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interpolators</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">RegularGridInterpolator</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">n_teff</span><span class="p">,</span> <span class="n">n_logg</span><span class="p">,</span> <span class="n">n_feh</span><span class="p">,</span> <span class="n">n_av</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">teff</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">logg</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">feh</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">av</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">band</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="p">:</span>
+            <span class="n">values_1d</span> <span class="o">=</span> <span class="n">dense</span><span class="p">[</span><span class="n">band</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">values_4d</span> <span class="o">=</span> <span class="n">values_1d</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_teff</span><span class="p">,</span> <span class="n">n_logg</span><span class="p">,</span> <span class="n">n_feh</span><span class="p">,</span> <span class="n">n_av</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interpolators</span><span class="p">[</span><span class="n">band</span><span class="p">]</span> <span class="o">=</span> <span class="n">RegularGridInterpolator</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">,</span>
+                <span class="n">values_4d</span><span class="p">,</span>
+                <span class="n">method</span><span class="o">=</span><span class="s2">"linear"</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">interp</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">teff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">logg</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">feh</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">av</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">bands</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">silence_bounds_warning</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">|</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+        <span class="n">use_bands</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bands</span> <span class="k">if</span> <span class="n">bands</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">bands</span>
+
+        <span class="n">teff_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">teff</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">logg_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">logg</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">feh_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">feh</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">av_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">av</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+        <span class="n">teff_b</span><span class="p">,</span> <span class="n">logg_b</span><span class="p">,</span> <span class="n">feh_b</span><span class="p">,</span> <span class="n">av_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast_arrays</span><span class="p">(</span><span class="n">teff_a</span><span class="p">,</span> <span class="n">logg_a</span><span class="p">,</span> <span class="n">feh_a</span><span class="p">,</span> <span class="n">av_a</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">teff_b</span><span class="o">.</span><span class="n">size</span>
+
+        <span class="n">teff_min</span><span class="p">,</span> <span class="n">teff_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">logg_min</span><span class="p">,</span> <span class="n">logg_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">feh_min</span><span class="p">,</span> <span class="n">feh_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">av_min</span><span class="p">,</span> <span class="n">av_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grid_axes</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">silence_bounds_warning</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span> <span class="ow">in</span> <span class="p">[</span>
+                <span class="p">(</span><span class="n">teff_b</span><span class="p">,</span> <span class="s2">"Teff"</span><span class="p">,</span> <span class="n">teff_min</span><span class="p">,</span> <span class="n">teff_max</span><span class="p">),</span>
+                <span class="p">(</span><span class="n">logg_b</span><span class="p">,</span> <span class="s2">"logg"</span><span class="p">,</span> <span class="n">logg_min</span><span class="p">,</span> <span class="n">logg_max</span><span class="p">),</span>
+                <span class="p">(</span><span class="n">feh_b</span><span class="p">,</span> <span class="s2">"feh"</span><span class="p">,</span> <span class="n">feh_min</span><span class="p">,</span> <span class="n">feh_max</span><span class="p">),</span>
+                <span class="p">(</span><span class="n">av_b</span><span class="p">,</span> <span class="s2">"Av"</span><span class="p">,</span> <span class="n">av_min</span><span class="p">,</span> <span class="n">av_max</span><span class="p">),</span>
+            <span class="p">]:</span>
+                <span class="n">n_out_of_bounds</span> <span class="o">=</span> <span class="p">((</span><span class="n">var</span> <span class="o">&lt;</span> <span class="n">min_val</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">var</span> <span class="o">&gt;</span> <span class="n">max_val</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">n_out_of_bounds</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"cogsworth"</span><span class="p">)</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">"cogsworth warning: </span><span class="si">{</span><span class="n">n_out_of_bounds</span><span class="si">}</span><span class="s2"> out of bounds points for </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> when "</span>
+                        <span class="sa">f</span><span class="s2">"interpolating MIST BCs (valid range: </span><span class="si">{</span><span class="n">min_val</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">max_val</span><span class="si">}</span><span class="s2">). Clipping to bounds."</span>
+                    <span class="p">)</span>
+
+        <span class="n">teff_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">teff_b</span><span class="p">,</span> <span class="n">teff_min</span><span class="p">,</span> <span class="n">teff_max</span><span class="p">)</span>
+        <span class="n">logg_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">logg_b</span><span class="p">,</span> <span class="n">logg_min</span><span class="p">,</span> <span class="n">logg_max</span><span class="p">)</span>
+        <span class="n">feh_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">feh_b</span><span class="p">,</span> <span class="n">feh_min</span><span class="p">,</span> <span class="n">feh_max</span><span class="p">)</span>
+        <span class="n">av_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">av_b</span><span class="p">,</span> <span class="n">av_min</span><span class="p">,</span> <span class="n">av_max</span><span class="p">)</span>
+
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span>
+            <span class="n">teff_b</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+            <span class="n">logg_b</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+            <span class="n">feh_b</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+            <span class="n">av_b</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+        <span class="p">])</span>
+
+        <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="n">b</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interpolators</span><span class="p">[</span><span class="n">b</span><span class="p">](</span><span class="n">pts</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">use_bands</span><span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">teff_b</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">()</span> <span class="ow">and</span> <span class="n">logg_b</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">()</span> <span class="ow">and</span> <span class="n">feh_b</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">()</span> <span class="ow">and</span> <span class="n">av_b</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">():</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">use_bands</span><span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.add_bands_photometry" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">add_bands_photometry</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">metallicity</span><span class="o">=</span><span class="mf">0.0142</span><span class="p">,</span> <span class="n">av</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">teff_col</span><span class="o">=</span><span class="s1">'teff_1'</span><span class="p">,</span> <span class="n">mass_col</span><span class="o">=</span><span class="s1">'mass_1'</span><span class="p">,</span> <span class="n">rad_col</span><span class="o">=</span><span class="s1">'rad_1'</span><span class="p">,</span> <span class="n">lum_col</span><span class="o">=</span><span class="s1">'lum_1'</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">'_1'</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silence_bounds_warning</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add photometry in one or more bands (and any requested colors) to a
+DataFrame of stars.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>df</code>
+            </td>
+            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Must contain <code>teff_col</code>, <code>mass_col</code>, <code>rad_col</code>, <code>lum_col</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>bc_grid</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="MISTBolometricCorrectionGrid
+
+
+  
+      dataclass
+   (eventlab.photometry.MISTBolometricCorrectionGrid)" href="#eventlab.photometry.MISTBolometricCorrectionGrid">MISTBolometricCorrectionGrid</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Bolometric correction grid, built with <code>build_photo_grid(bands)</code>.
+Required so the grid is only built once when calling this for
+multiple stars.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>metallicity</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Metallicity Z (mass fraction) applied to every star. Default (0.0142)
+is solar.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.0142</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>av</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Visual extinction applied to every star. Default 0 (no extinction).</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>teff_col</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the effective temperature column in <code>df</code>. Defaults to
+'teff_1', COSMIC's default column name for the primary. Units of K.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;teff_1&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>mass_col</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the mass column in <code>df</code>. Defaults to 'mass_1', COSMIC's
+default column name for the primary. Units of Msun.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;mass_1&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>rad_col</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the radius column in <code>df</code>. Defaults to 'rad_1', COSMIC's
+default column name for the primary. Units of Rsun.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;rad_1&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>lum_col</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the luminosity column in <code>df</code>. Defaults to 'lum_1', COSMIC's
+default column name for the primary. Units of Lsun.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;lum_1&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>suffix</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Suffix appended to every output column name (log_g, M_{band}, etc.),
+so results can be told apart when this is called more than once for
+different stars/objects. Defaults to '_1', matching COSMIC's
+convention for the primary; pass '_2' (or your own scheme) for the
+secondary, set suffix to the empty str if you plan to use once, etc.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;_1&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>distance</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A single distance in kiloparsecs applied to every star. If given,
+apparent mags are also added. If None, only absolute mags are
+computed.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>silence_bounds_warning</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to silence the out-of-bounds warning from the MIST BC grid.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>bands</code>
+            </td>
+            <td>
+                  <code><span title="tuple">tuple</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The tuple of bands to compute photometry for, e.g. ("Bessell_B", "Bessell_V").
+Must match (or be a subset of) the bands <code>bc_grid</code> was built with.
+Defaults to <code>bc_grid.bands</code> if not given.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>colors</code>
+            </td>
+            <td>
+                  <code><span title="list">list</span>[<span title="tuple">tuple</span>[<span title="str">str</span>, <span title="str">str</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Pairs of bands to difference into a color, e.g. [("Bessell_B", "Bessell_V")]
+computes B-V. Each band in a pair must be present in <code>bands</code>. If None,
+no colors are computed.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>df</code></td>            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Same DataFrame with added columns: log_g{suffix}, M_{band}{suffix} for
+each band (and m_{band}{suffix} if distance is given), plus
+{band0}-{band1}{suffix} for each requested color.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If any requested band is not available in <code>bc_grid</code>, or if a
+<code>colors</code> pair references a band not present in <code>bands</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">bc_grid</span> <span class="o">=</span> <span class="n">build_photo_grid</span><span class="p">(</span><span class="n">bands</span><span class="o">=</span><span class="p">(</span><span class="s2">"Bessell_B"</span><span class="p">,</span> <span class="s2">"Bessell_V"</span><span class="p">,</span> <span class="s2">"Bessel_I"</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bcm</span> <span class="o">=</span> <span class="n">add_bands_photometry</span><span class="p">(</span><span class="n">bcm</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">(</span><span class="s2">"Bessell_B"</span><span class="p">,</span> <span class="s2">"Bessell_V"</span><span class="p">,</span> <span class="s2">"Bessel_I"</span><span class="p">),</span>
+<span class="gp">... </span>                           <span class="n">colors</span><span class="o">=</span><span class="p">[(</span><span class="s2">"Bessell_B"</span><span class="p">,</span> <span class="s2">"Bessell_V"</span><span class="p">)],</span>
+<span class="gp">... </span>                           <span class="n">teff_col</span><span class="o">=</span><span class="s1">'teff_1'</span><span class="p">,</span> <span class="n">mass_col</span><span class="o">=</span><span class="s1">'mass_1'</span><span class="p">,</span> <span class="n">rad_col</span><span class="o">=</span><span class="s1">'rad_1'</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">lum_col</span><span class="o">=</span><span class="s1">'lum_1'</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">'_1'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bcm</span> <span class="o">=</span> <span class="n">add_bands_photometry</span><span class="p">(</span><span class="n">bcm</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">(</span><span class="s2">"Bessell_B"</span><span class="p">,</span> <span class="s2">"Bessell_V"</span><span class="p">,</span> <span class="s2">"Bessel_I"</span><span class="p">),</span>
+<span class="gp">... </span>                           <span class="n">colors</span><span class="o">=</span><span class="p">[(</span><span class="s2">"Bessell_B"</span><span class="p">,</span> <span class="s2">"Bessell_V"</span><span class="p">)],</span>
+<span class="gp">... </span>                           <span class="n">teff_col</span><span class="o">=</span><span class="s1">'teff_2'</span><span class="p">,</span> <span class="n">mass_col</span><span class="o">=</span><span class="s1">'mass_2'</span><span class="p">,</span> <span class="n">rad_col</span><span class="o">=</span><span class="s1">'rad_2'</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">lum_col</span><span class="o">=</span><span class="s1">'lum_2'</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">'_2'</span><span class="p">)</span>
+</code></pre></div>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_bands_photometry</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+                         <span class="n">bc_grid</span><span class="p">,</span>
+                         <span class="n">metallicity</span><span class="o">=</span><span class="mf">0.0142</span><span class="p">,</span>
+                         <span class="n">av</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                         <span class="n">teff_col</span><span class="o">=</span><span class="s1">'teff_1'</span><span class="p">,</span>
+                         <span class="n">mass_col</span><span class="o">=</span><span class="s1">'mass_1'</span><span class="p">,</span>
+                         <span class="n">rad_col</span><span class="o">=</span><span class="s1">'rad_1'</span><span class="p">,</span>
+                         <span class="n">lum_col</span><span class="o">=</span><span class="s1">'lum_1'</span><span class="p">,</span>
+                         <span class="n">suffix</span><span class="o">=</span><span class="s1">'_1'</span><span class="p">,</span>
+                         <span class="n">distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">silence_bounds_warning</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                         <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Add photometry in one or more bands (and any requested colors) to a</span>
+<span class="sd">    DataFrame of stars.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        Must contain `teff_col`, `mass_col`, `rad_col`, `lum_col`.</span>
+<span class="sd">    bc_grid : MISTBolometricCorrectionGrid</span>
+<span class="sd">        Bolometric correction grid, built with `build_photo_grid(bands)`.</span>
+<span class="sd">        Required so the grid is only built once when calling this for</span>
+<span class="sd">        multiple stars.</span>
+<span class="sd">    metallicity : float</span>
+<span class="sd">        Metallicity Z (mass fraction) applied to every star. Default (0.0142)</span>
+<span class="sd">        is solar.</span>
+<span class="sd">    av : float</span>
+<span class="sd">        Visual extinction applied to every star. Default 0 (no extinction).</span>
+<span class="sd">    teff_col : str</span>
+<span class="sd">        Name of the effective temperature column in `df`. Defaults to</span>
+<span class="sd">        'teff_1', COSMIC's default column name for the primary. Units of K.</span>
+<span class="sd">    mass_col : str</span>
+<span class="sd">        Name of the mass column in `df`. Defaults to 'mass_1', COSMIC's</span>
+<span class="sd">        default column name for the primary. Units of Msun.</span>
+<span class="sd">    rad_col : str</span>
+<span class="sd">        Name of the radius column in `df`. Defaults to 'rad_1', COSMIC's</span>
+<span class="sd">        default column name for the primary. Units of Rsun.</span>
+<span class="sd">    lum_col : str</span>
+<span class="sd">        Name of the luminosity column in `df`. Defaults to 'lum_1', COSMIC's</span>
+<span class="sd">        default column name for the primary. Units of Lsun.</span>
+<span class="sd">    suffix : str</span>
+<span class="sd">        Suffix appended to every output column name (log_g, M_{band}, etc.),</span>
+<span class="sd">        so results can be told apart when this is called more than once for</span>
+<span class="sd">        different stars/objects. Defaults to '_1', matching COSMIC's</span>
+<span class="sd">        convention for the primary; pass '_2' (or your own scheme) for the</span>
+<span class="sd">        secondary, set suffix to the empty str if you plan to use once, etc.</span>
+<span class="sd">    distance : float, optional</span>
+<span class="sd">        A single distance in kiloparsecs applied to every star. If given,</span>
+<span class="sd">        apparent mags are also added. If None, only absolute mags are</span>
+<span class="sd">        computed.</span>
+<span class="sd">    silence_bounds_warning : bool</span>
+<span class="sd">        Whether to silence the out-of-bounds warning from the MIST BC grid.</span>
+<span class="sd">    bands : tuple[str], optional</span>
+<span class="sd">        The tuple of bands to compute photometry for, e.g. ("Bessell_B", "Bessell_V").</span>
+<span class="sd">        Must match (or be a subset of) the bands `bc_grid` was built with.</span>
+<span class="sd">        Defaults to `bc_grid.bands` if not given.</span>
+<span class="sd">    colors : list[tuple[str, str]], optional</span>
+<span class="sd">        Pairs of bands to difference into a color, e.g. [("Bessell_B", "Bessell_V")]</span>
+<span class="sd">        computes B-V. Each band in a pair must be present in `bands`. If None,</span>
+<span class="sd">        no colors are computed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        Same DataFrame with added columns: log_g{suffix}, M_{band}{suffix} for</span>
+<span class="sd">        each band (and m_{band}{suffix} if distance is given), plus</span>
+<span class="sd">        {band0}-{band1}{suffix} for each requested color.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If any requested band is not available in `bc_grid`, or if a</span>
+<span class="sd">        `colors` pair references a band not present in `bands`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; bc_grid = build_photo_grid(bands=("Bessell_B", "Bessell_V", "Bessel_I"))</span>
+<span class="sd">    &gt;&gt;&gt; bcm = add_bands_photometry(bcm, bc_grid, bands=("Bessell_B", "Bessell_V", "Bessel_I"),</span>
+<span class="sd">    ...                            colors=[("Bessell_B", "Bessell_V")],</span>
+<span class="sd">    ...                            teff_col='teff_1', mass_col='mass_1', rad_col='rad_1',</span>
+<span class="sd">    ...                            lum_col='lum_1', suffix='_1')</span>
+<span class="sd">    &gt;&gt;&gt; bcm = add_bands_photometry(bcm, bc_grid, bands=("Bessell_B", "Bessell_V", "Bessel_I"),</span>
+<span class="sd">    ...                            colors=[("Bessell_B", "Bessell_V")],</span>
+<span class="sd">    ...                            teff_col='teff_2', mass_col='mass_2', rad_col='rad_2',</span>
+<span class="sd">    ...                            lum_col='lum_2', suffix='_2')</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">bands</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bands</span> <span class="o">=</span> <span class="n">bc_grid</span><span class="o">.</span><span class="n">bands</span>
+
+    <span class="n">missing</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bands</span> <span class="k">if</span> <span class="n">b</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bc_grid</span><span class="o">.</span><span class="n">bands</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"band(s) </span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2"> not available in bc_grid (built with bands=</span><span class="si">{</span><span class="n">bc_grid</span><span class="o">.</span><span class="n">bands</span><span class="si">}</span><span class="s2">); "</span>
+            <span class="s2">"rebuild bc_grid with build_photo_grid(bands=...) including these bands"</span>
+        <span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">logg_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"log_g</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">if</span> <span class="n">logg_col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">logg_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_log_g</span><span class="p">(</span><span class="n">mass</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">mass_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Msun</span><span class="p">,</span>
+                                  <span class="n">radius</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">rad_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Rsun</span><span class="p">)</span>
+
+    <span class="n">feh_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">metallicity</span> <span class="o">/</span> <span class="mf">0.0142</span><span class="p">)</span>  <span class="c1"># Bertelli+1994-style, Z_sun = 0.0142</span>
+    <span class="n">feh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">feh_value</span><span class="p">)</span>
+
+    <span class="n">av_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">av</span><span class="p">)</span>
+
+    <span class="n">bc</span> <span class="o">=</span> <span class="n">bc_grid</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">teff</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">teff_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">logg</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">logg_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                         <span class="n">feh</span><span class="o">=</span><span class="n">feh</span><span class="p">,</span> <span class="n">av</span><span class="o">=</span><span class="n">av_arr</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="n">bands</span><span class="p">,</span>
+                         <span class="n">silence_bounds_warning</span><span class="o">=</span><span class="n">silence_bounds_warning</span><span class="p">)</span>
+
+    <span class="n">M_bol</span> <span class="o">=</span> <span class="n">get_absolute_bol_mag</span><span class="p">(</span><span class="n">lum</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">lum_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Lsun</span><span class="p">)</span>
+
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">distance</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kpc</span> <span class="k">if</span> <span class="n">distance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"M_</span><span class="si">{</span><span class="n">b</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">M_bol</span> <span class="o">-</span> <span class="n">bc</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="k">if</span> <span class="n">dist</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"m_</span><span class="si">{</span><span class="n">b</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_apparent_mag</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"M_</span><span class="si">{</span><span class="n">b</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">colors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">b0</span><span class="p">,</span> <span class="n">b1</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">b0</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bands</span> <span class="ow">or</span> <span class="n">b1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"color pair (</span><span class="si">{</span><span class="n">b0</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">b1</span><span class="si">}</span><span class="s2">) requires both bands to be in `bands`=</span><span class="si">{</span><span class="n">bands</span><span class="si">}</span><span class="s2">"</span>
+                <span class="p">)</span>
+            <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">b0</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">b1</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"M_</span><span class="si">{</span><span class="n">b0</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">"M_</span><span class="si">{</span><span class="n">b1</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.build_photo_grid" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">build_photo_grid</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Build a MIST bolometric correction grid for an arbitrary pair of bands.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>bands</code>
+            </td>
+            <td>
+                  <code><span title="tuple">tuple</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A tuple of photometric bands to build the grid for, e.g.
+("Bessell_B", "Bessell_V", "Bessel_I") or ("2MASS_J", "2MASS_Ks"). Must both
+belong to the same MIST filter set (see <code>MIST_FILTER_SETS</code>).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bc_grid</code></td>            <td>
+                  <code><a class="autorefs autorefs-internal" title="MISTBolometricCorrectionGrid
+
+
+  
+      dataclass
+   (eventlab.photometry.MISTBolometricCorrectionGrid)" href="#eventlab.photometry.MISTBolometricCorrectionGrid">MISTBolometricCorrectionGrid</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Grid set up for the given <code>bands</code>, ready to pass into
+<code>add_bands_photometry</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">build_photo_grid</span><span class="p">(</span><span class="n">bands</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Build a MIST bolometric correction grid for an arbitrary pair of bands.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bands : tuple[str]</span>
+<span class="sd">        A tuple of photometric bands to build the grid for, e.g.</span>
+<span class="sd">        ("Bessell_B", "Bessell_V", "Bessel_I") or ("2MASS_J", "2MASS_Ks"). Must both</span>
+<span class="sd">        belong to the same MIST filter set (see `MIST_FILTER_SETS`).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bc_grid : MISTBolometricCorrectionGrid</span>
+<span class="sd">        Grid set up for the given `bands`, ready to pass into</span>
+<span class="sd">        `add_bands_photometry`.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">MISTBolometricCorrectionGrid</span><span class="p">(</span><span class="n">bands</span><span class="o">=</span><span class="n">bands</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.get_absolute_bol_mag" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_absolute_bol_mag</span><span class="p">(</span><span class="n">lum</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Computes the absolute bolometric magnitude following
+IAU Resolution B2 (https://www.iau.org/news/announcements/detail/ann15023/)</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>lum</code>
+            </td>
+            <td>
+                  <code>:class:`~astropy.units.Quantity` [luminosity]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Luminosity of the star</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>M_bol</code></td>            <td>
+                  <code>:class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Absolute bolometric magnitude</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_absolute_bol_mag</span><span class="p">(</span><span class="n">lum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Computes the absolute bolometric magnitude following</span>
+<span class="sd">    IAU Resolution B2 (https://www.iau.org/news/announcements/detail/ann15023/)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lum : :class:`~astropy.units.Quantity` [luminosity]</span>
+<span class="sd">        Luminosity of the star</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    M_bol : :class:`~numpy.ndarray`</span>
+<span class="sd">        Absolute bolometric magnitude</span>
+<span class="sd">    """</span>
+    <span class="n">zero_point_lum</span> <span class="o">=</span> <span class="mf">3.0128e28</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">watt</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">lum</span> <span class="o">/</span> <span class="n">zero_point_lum</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.get_absolute_mag" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_absolute_mag</span><span class="p">(</span><span class="n">m_app</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert apparent magnitude to absolute magnitude</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>m_app</code>
+            </td>
+            <td>
+                  <code>:class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Apparent magnitude</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>distance</code>
+            </td>
+            <td>
+                  <code>:class:`~astropy.units.Quantity` [length]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Distance</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>M_abs</code></td>            <td>
+                  <code>:class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Absolute magnitude</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_absolute_mag</span><span class="p">(</span><span class="n">m_app</span><span class="p">,</span> <span class="n">distance</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Convert apparent magnitude to absolute magnitude</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    m_app : :class:`~numpy.ndarray`</span>
+<span class="sd">        Apparent magnitude</span>
+<span class="sd">    distance : :class:`~astropy.units.Quantity` [length]</span>
+<span class="sd">        Distance</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    M_abs : :class:`~numpy.ndarray`</span>
+<span class="sd">        Absolute magnitude</span>
+<span class="sd">    """</span>
+    <span class="n">M_abs</span> <span class="o">=</span> <span class="n">m_app</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">distance</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">M_abs</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.get_apparent_mag" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_apparent_mag</span><span class="p">(</span><span class="n">M_abs</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert absolute magnitude to apparent magnitude</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>M_abs</code>
+            </td>
+            <td>
+                  <code>:class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Absolute magnitude</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>distance</code>
+            </td>
+            <td>
+                  <code>:class:`~astropy.units.Quantity` [length]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Distance</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>m_app</code></td>            <td>
+                  <code>:class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Apparent magnitude</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_apparent_mag</span><span class="p">(</span><span class="n">M_abs</span><span class="p">,</span> <span class="n">distance</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Convert absolute magnitude to apparent magnitude</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    M_abs : :class:`~numpy.ndarray`</span>
+<span class="sd">        Absolute magnitude</span>
+<span class="sd">    distance : :class:`~astropy.units.Quantity` [length]</span>
+<span class="sd">        Distance</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    m_app : :class:`~numpy.ndarray`</span>
+<span class="sd">        Apparent magnitude</span>
+<span class="sd">    """</span>
+    <span class="n">finite_distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+    <span class="n">m_app</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">distance</span><span class="p">))</span>
+    <span class="n">m_app</span><span class="p">[</span><span class="n">finite_distance</span><span class="p">]</span> <span class="o">=</span> <span class="n">M_abs</span><span class="p">[</span><span class="n">finite_distance</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="n">finite_distance</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">m_app</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="eventlab.photometry.get_log_g" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_log_g</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Computes log of the surface gravity in cgs</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>mass</code>
+            </td>
+            <td>
+                  <code>:class:`~astropy.units.Quantity` [mass]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mass of the star</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>radius</code>
+            </td>
+            <td>
+                  <code>:class:`~astropy.units.Quantity` [radius]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Radius of the star</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>log g : :class:`~numpy.ndarray`</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Log of the surface gravity in cgs</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src/eventlab/photometry.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_log_g</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Computes log of the surface gravity in cgs</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mass : :class:`~astropy.units.Quantity` [mass]</span>
+<span class="sd">        Mass of the star</span>
+<span class="sd">    radius : :class:`~astropy.units.Quantity` [radius]</span>
+<span class="sd">        Radius of the star</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    log g : :class:`~numpy.ndarray`</span>
+<span class="sd">        Log of the surface gravity in cgs</span>
+<span class="sd">    """</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">const</span><span class="o">.</span><span class="n">G</span> <span class="o">*</span> <span class="n">mass</span> <span class="o">/</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="c1"># avoid division by zero errors (for massless remnants)</span>
+    <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">cgs</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
